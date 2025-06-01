@@ -1,6 +1,7 @@
 import gradio as gr
 from modules import shared
 
+
 def update_upscalers_list(selected: str):
     return gr.Dropdown.update(
         value=selected, choices=[upscaler.name for upscaler in shared.sd_upscalers]
